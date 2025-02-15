@@ -1,0 +1,55 @@
+{
+  "name": "the-other-waifu",
+  "displayName": "the-other-waifu",
+  "description": "A simple VS Code extension with a custom sidebar view.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:waifu-sidebar"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "custom-activitybar",
+          "title": "VSCode Extension",
+          "icon": "media/image.svg"
+        }
+      ]
+    },
+    "views": {
+      "custom-activitybar": [
+        {
+          "type": "webview",
+          "id": "vscodeSidebar.openview",
+          "name": "Konichiwa!",
+          "contextualTitle": "Waifu"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.97.0",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
+    "@typescript-eslint/parser": "^8.22.0",
+    "eslint": "^9.19.0",
+    "typescript": "^5.7.3",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
