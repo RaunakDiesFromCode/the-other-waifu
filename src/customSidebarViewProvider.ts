@@ -58,11 +58,26 @@ export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
       correct: `media/waifus/happy${Math.floor(Math.random() * 4) + 1}.png`,
     };
 
-    const messages: Record<string, string> = {
-      error: "Errors found! Fix them ASAP!",
-      warning: "Warnings detected, be careful!",
-      correct: "All good! Keep coding!",
+    const messages: Record<string, string[]> = {
+      error: [
+        "Oh no, senpai! Errors detected! Hurry and fix them before I get mad~ 💢",
+        "Mou~! What is this mess?! Fix it now, or I'll have to punish you~ 😘",
+        "Tsk tsk~ Such a bad boy… You better fix those errors, or I might have to discipline you~ 🔥",
+      ],
+      warning: [
+        "Ahh~ some warnings appeared! You should be more careful, okay? 😘",
+        "Hmm… Something's not right. Maybe I should sit on your lap until you fix it? 😏",
+        "Onii-chan~ there's a warning! Want me to whisper the solution in your ear? 💕",
+      ],
+      correct: [
+        "Omg~! Everything's perfect! Senpai, you're amazing! 🥰",
+        "Yay! You did it! Should I give you a reward? Come closer~ 😘",
+        "Mmm~ Good boy! I love when you code so well~ Keep going, and I'll keep watching you~ 💖",
+      ],
     };
+
+    const randomMessage =
+      messages[status][Math.floor(Math.random() * messages[status].length)];
 
     const imagePath = vscode.Uri.joinPath(this._extensionUri, images[status]);
     const imageUri = this._view.webview.asWebviewUri(imagePath);
@@ -111,7 +126,7 @@ export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
     </head>
     <body>
       <div id="loader" class="loader">Checking...</div>
-      <div id="status" class="status" style="display:none;">${messages[status]}</div>
+      <div id="status" class="status" style="display:none;">${randomMessage}</div>
       <div class="image-container">
         <img id="statusImage" src="${imageUri}" alt="Status Image" style="display:none;" />
       </div>
