@@ -19,7 +19,7 @@
         {
           "id": "custom-activitybar",
           "title": "VSCode Extension",
-          "icon": "media/image.svg"
+          "icon": "media/icon/icon.svg"
         }
       ]
     },
