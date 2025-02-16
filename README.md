@@ -1,71 +1,52 @@
-# the-other-waifu README
+# Anime Coding Companion
 
-This is the README for your extension "the-other-waifu". After writing up a brief description, we recommend including the following sections.
+A fun and motivational VS Code extension that places an anime girl in the corner of your editor to cheer you on and keep you coding! Whether you're working on a side project or grinding through bug fixes, your anime waifu will be there to encourage you.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+✨ **Customizable Anime Characters** – Choose your favorite waifu to accompany you while coding.  
+💬 **Motivational Messages** – She encourages you when you slow down or stop typing.  
+⏳ **Idle Detection** – If you're idle for too long, she reminds you to get back to work!  
+🎙 **Voice Lines & Sound Effects** (Optional) – Spoken encouragement to boost your morale.  
+💻 **2D or 3D Mode** – Switch between a cute animated sprite or a 3D-rendered model.  
+🎨 **Custom Themes & Personalization** – Adjust her appearance, expressions, and reactions.  
 
-For example if there is an image subfolder under your extension project workspace:
+## Installation
 
-\!\[feature X\]\(images/feature-x.png\)
+1. Open VS Code.
+2. Go to the Extensions Marketplace (`Ctrl+Shift+X`).
+3. Search for `Anime Coding Companion`.
+4. Click **Install** and enjoy!
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Alternatively, you can install it manually:
+```sh
+code --install-extension anime-coding-companion
+```
 
-## Requirements
+## Usage
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+1. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P` on Mac).
+2. Type `Anime Coding Companion: Show` and press Enter.
+3. Your anime waifu will appear in the corner to keep you motivated!  
+4. To customize her appearance and settings, open the extension settings.
 
-## Extension Settings
+## Configuration
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+You can customize your anime waifu in **VS Code Settings** (`settings.json` or UI panel):
 
-For example:
+```json
+{
+  "animeCodingCompanion.character": "default",
+  "animeCodingCompanion.enableVoice": true,
+  "animeCodingCompanion.idleTimeout": 300  
+}
+```
 
-This extension contributes the following settings:
+## Contributing
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+Pull requests and suggestions are welcome! Feel free to open an issue or contribute.
 
-## Known Issues
+## License
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+This project is licensed under the **MIT License**.
 
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
